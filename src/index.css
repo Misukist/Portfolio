@@ -1,0 +1,10 @@
+@font-face {
+  font-family: FiraCode;
+  src: url(../src/assets/fonts/FiraCode-Regular.ttf);
+}
+
+@import 'tailwindcss';
+
+body {
+  font-family: 'FiraCode', sans-serif;
+}
