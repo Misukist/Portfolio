@@ -67,10 +67,13 @@ const Projects = () => {
           React tailwind-css JWT Node.js MongoDB Pokemon-API
         </p>
         <div className=" pl-5 py-3 pt-5 border-b border-x  border-[#ABB2BF] ">
-          <h3 className="text-white text-2xl font-medium"> X-Clone </h3>
+          <h3 className="text-white text-2xl font-medium">
+            {' '}
+            Pokecard Collection{' '}
+          </h3>
           <p className=" pt-2 text-base font-light text-[#ABB2BF]">
             {' '}
-            Pokecard collection app{' '}
+            Make your own collection{' '}
           </p>
           <div className="pt-4 pb-6 flex ">
             <button className="px-4 py-2 mr-5 flex border text-white border-[#9178DD] items-center">
@@ -122,10 +125,10 @@ const Projects = () => {
           React css HTML Node.js Weather-API
         </p>
         <div className=" pl-5 py-3 pt-5 border-b border-x  border-[#ABB2BF] ">
-          <h3 className="text-white text-2xl font-medium"> X-Clone </h3>
+          <h3 className="text-white text-2xl font-medium"> Weather App </h3>
           <p className=" pt-2 text-base font-light text-[#ABB2BF]">
             {' '}
-            Social media platform{' '}
+            Search weather by country{' '}
           </p>
           <div className="pt-4 pb-6 flex ">
             <button className="px-4 py-2 flex border text-white border-[#ABB2BF] items-center">

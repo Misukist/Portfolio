@@ -1,6 +1,7 @@
 import GithubIcon from '../assets/images/github-svgrepo-com.svg';
 import LinkedinIcon from '../assets/images/linkedin-svgrepo-com.svg';
 import Projects from './projectCards';
+import Skills from './skills';
 
 const HomePage = () => {
   return (
@@ -69,6 +70,17 @@ const HomePage = () => {
           </a>
         </div>
         <Projects></Projects>
+      </section>
+      <section id="skills" className="pt-30 ">
+        <div className=" flex items-center justify-between">
+          <div className="flex items-center gap-2 flex-1">
+            <h1 className="text-3xl font-medium text-[#9178DD]">
+              #<span className="text-white">skills</span>
+            </h1>
+            <hr className=" grow border-t border-[#9178DD]"></hr>
+          </div>
+        </div>
+        <Skills></Skills>
       </section>
     </div>
   );
