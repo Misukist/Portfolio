@@ -4,7 +4,7 @@ import Projects from './projectCards';
 
 const HomePage = () => {
   return (
-    <div className="bg-[#282C33] min-h-screen py-20 px-72 ">
+    <div className="bg-[#282C33] min-h-screen py-35 px-72 ">
       <section
         id="home"
         className=" pt-20 flex flex-row items-center gap-16 md:justify-between lg:justify-center"
