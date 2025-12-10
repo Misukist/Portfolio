@@ -1,6 +1,6 @@
 const Projects = () => {
   return (
-    <div className="flex">
+    <div className="flex justify-between">
       <div className="w-120 pt-12 mx-2">
         <div className="aspect-video overflow-hidden border border-[#ABB2BF]">
           <img
