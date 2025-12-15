@@ -1,4 +1,8 @@
 const NavBar = () => {
+  const scrollToHome = () => {
+    const homeSection = document.getElementById('home');
+    homeSection?.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
     <div className="bg-[#282C33] fixed top-0 z-50 flex space-x-10 justify-center w-full py-6 text-xl pb-1 ">
       <a href="#home" className="flex group">

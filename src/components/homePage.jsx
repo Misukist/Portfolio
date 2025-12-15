@@ -1,14 +1,25 @@
-import GithubIcon from '../assets/images/github-svgrepo-com.svg';
-import LinkedinIcon from '../assets/images/linkedin-svgrepo-com.svg';
+import { useRef } from 'react';
 import Projects from './projectCards';
 import Skills from './skills';
+import ScrollElement from './scrollEvent.jsx';
 
 const HomePage = () => {
+  const homeRef = useRef(null);
+  const projectRef = useRef(null);
+  const aboutMeRef = useRef(null);
+  const contactsRef = useRef(null);
+  const skillsRef = useRef(null);
+  const scrollRef = useRef(null);
+
   return (
-    <div className="bg-[#282C33] min-h-screen pt-35 px-72  ">
+    <div
+      ref={scrollRef}
+      className="bg-[#282C33] pt-35 px-72 relative snap-y overflow-y-scroll h-screen snap-mandatory scroll-smooth overflow-hidden"
+    >
       <section
         id="home"
-        className=" pt-20 flex flex-row items-center gap-16 md:justify-between lg:justify-center"
+        ref={homeRef}
+        className=" pt-50 pb-60 flex flex-row items-center gap-16 md:justify-between lg:justify-center snap-start "
       >
         <div className="text-4xl gap-3 p-14 font-semibold  flex flex-col">
           <h1 className="text-white">Hello, I'm Mikael a</h1>
@@ -17,14 +28,75 @@ const HomePage = () => {
             I help founders turn ideas into seamless <br /> digital experiences
           </p>
           <div className="flex gap-3 pt-7 items-center">
-            <button className="text-xl font-light text-white border-2 py-2 px-4 border-[#9178DD]  justify-center">
-              Contact me!!
-            </button>
-            <a className="">
-              <img src={GithubIcon} className="w-9 h-auto" />
+            <a href="mailto:misukisti@gmail.com">
+              <button className="text-xl font-light text-white border-2 py-2 px-4 border-[#9178DD]  justify-center hover:bg-[#9178DD]">
+                Contact me!!
+              </button>
             </a>
-            <a className="">
-              <img src={LinkedinIcon} className="w-9 h-auto" />
+            <a
+              href="https://github.com/Misukist"
+              className="text-[#ABB2BF] hover:text-[#9178DD]"
+            >
+              <svg
+                width="40px"
+                height="40px"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M8 1C4.133 1 1 4.13 1 7.993c0 3.09 2.006 5.71 4.787 6.635.35.064.478-.152.478-.337 0-.166-.006-.606-.01-1.19-1.947.423-2.357-.937-2.357-.937-.319-.808-.778-1.023-.778-1.023-.635-.434.048-.425.048-.425.703.05 1.073.72 1.073.72.624 1.07 1.638.76 2.037.582.063-.452.244-.76.444-.935-1.554-.176-3.188-.776-3.188-3.456 0-.763.273-1.388.72-1.876-.072-.177-.312-.888.07-1.85 0 0 .586-.189 1.924.716A6.711 6.711 0 018 4.381c.595.003 1.194.08 1.753.236 1.336-.905 1.923-.717 1.923-.717.382.963.142 1.674.07 1.85.448.49.72 1.114.72 1.877 0 2.686-1.638 3.278-3.197 3.45.251.216.475.643.475 1.296 0 .934-.009 1.688-.009 1.918 0 .187.127.404.482.336A6.996 6.996 0 0015 7.993 6.997 6.997 0 008 1z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/mikael-virtanen-71433b304/"
+              className="text-[#ABB2BF] hover:text-[#9178DD]"
+            >
+              <svg
+                version="1.1"
+                id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="40px"
+                height="40px"
+                viewBox="0 0 32 32"
+                enable-background="new 0 0 32 32"
+                xml:space="preserve"
+              >
+                <g>
+                  <path
+                    fill="currentColor"
+                    d="M19.515,11.952c-0.678,0-1.18,0.171-1.573,0.387c-0.063-0.224-0.27-0.388-0.514-0.339h-2.984
+                    c-0.295-0.049-0.534,0.19-0.443,0.5v11c-0.091,0.28,0.148,0.52,0.443,0.5h2.984c0.295,0.02,0.534-0.22,0.534-0.515l-0.001-6.648
+                    c-0.001-0.003-0.012-0.321,0.189-0.54c0.161-0.174,0.438-0.263,0.821-0.263c0.638,0,0.922,0.261,1.028,0.845v6.606
+                    C19.894,23.78,20.133,24.02,20.428,24h3.145c0.295,0.02,0.534-0.22,0.428-0.515v-6.828C24.106,13.185,21.633,11.952,19.515,11.952z
+                    M23.038,23h-2.076v-6.121c0-1.181-0.763-1.913-1.99-1.913c-0.694,0-1.234,0.204-1.606,0.606C16.849,16.132,16.889,16.842,17,17v6
+                    h-2.022v-9.98h1.916v0.336c0,0.203,0.115,0.39,0.298,0.479c0.183,0.089,0.4,0.067,0.562-0.056l0.14-0.108
+                    c0.405-0.319,0.824-0.65,1.622-0.65c0.826,0,3.523,0.263,3.523,3.637V23z"
+                  />
+                  <path
+                    fill="currentColor"
+                    d="M11,6.966C9.878,6.966,8.966,7.878,8.966,9S9.878,11.034,11,11.034S13.034,10.122,13.034,9
+                    S12.122,6.966,11,6.966z M11,9.966c-0.532,0-0.966-0.434-0.966-0.966S10.468,8.034,11,8.034S11.966,8.468,11.966,9
+                    S11.532,9.966,11,9.966z"
+                  />
+                  <path
+                    fill="currentColor"
+                    d="M12.428,11.951H9.46c-0.295,0-0.534,0.239-0.46,0.549v11c-0.074,0.28,0.165,0.52,0.46,0.5h2.968
+                      c0.295,0.02,0.534-0.22,0.534-0.515v-11C12.962,12.19,12.723,11.951,12.428,11.951z M12,23H9.994v-9.98H12V23z"
+                  />
+                  <path
+                    fill="currentColor"
+                    d="M16-0.034C7.158-0.034-0.034,7.158-0.034,16S7.158,32.034,16,32.034S32.034,24.842,32.034,16
+                    S24.842-0.034,16-0.034z M16,30.966C7.748,30.966,1.034,24.252,1.034,16S7.748,1.034,16,1.034S30.966,7.748,30.966,16
+                    S24.252,30.966,16,30.966z"
+                  />
+                </g>
+              </svg>
             </a>
           </div>
         </div>
@@ -43,7 +115,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section id="projects" className="pt-70 ">
+      <section id="projects" ref={projectRef} className="pt-30 snap-start">
         <div className=" flex items-center justify-between">
           <div className="flex items-center gap-2">
             <h1 className="text-3xl font-medium text-[#9178DD]">
@@ -71,7 +143,7 @@ const HomePage = () => {
         </div>
         <Projects></Projects>
       </section>
-      <section id="skills" className="pt-30 ">
+      <section id="skills" className="pt-30 snap-start">
         <div className=" flex items-center justify-between">
           <div className="flex items-center gap-2 flex-1">
             <h1 className="text-3xl font-medium text-[#9178DD]">
@@ -83,7 +155,7 @@ const HomePage = () => {
         <Skills></Skills>
       </section>
 
-      <section id="about-me" className="pt-30 ">
+      <section id="about-me" ref={aboutMeRef} className="pt-30  snap-start ">
         <div className=" flex items-center justify-between">
           <div className="flex items-center gap-2 flex-1">
             <h1 className="text-3xl font-medium text-[#9178DD]">
@@ -107,7 +179,7 @@ const HomePage = () => {
         </p>
       </section>
 
-      <section id="contacts" className="pt-30 ">
+      <section id="contacts" ref={contactsRef} className="pt-30 snap-start ">
         <div className=" flex items-center justify-between">
           <div className="flex items-center gap-2 flex-1">
             <h1 className="text-3xl font-medium text-[#9178DD]">
@@ -143,7 +215,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      <section>
+      <section className="snap-start">
         <div className="-mx-72">
           <hr className="w-screen mt-14 border-t border-white" />
         </div>
@@ -157,11 +229,70 @@ const HomePage = () => {
           <div className=" pt-14">
             <h2 className="text-2xl flex text-white font-semibold">Media</h2>
             <div className="flex justify-center gap-2 pt-2">
-              <a className="">
-                <img src={GithubIcon} className="w-9 h-auto" />
+              <a
+                href="https://github.com/Misukist"
+                className="text-black hover:text-[#ABB2BF]"
+              >
+                <svg
+                  width="35px"
+                  height="35px"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                >
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M8 1C4.133 1 1 4.13 1 7.993c0 3.09 2.006 5.71 4.787 6.635.35.064.478-.152.478-.337 0-.166-.006-.606-.01-1.19-1.947.423-2.357-.937-2.357-.937-.319-.808-.778-1.023-.778-1.023-.635-.434.048-.425.048-.425.703.05 1.073.72 1.073.72.624 1.07 1.638.76 2.037.582.063-.452.244-.76.444-.935-1.554-.176-3.188-.776-3.188-3.456 0-.763.273-1.388.72-1.876-.072-.177-.312-.888.07-1.85 0 0 .586-.189 1.924.716A6.711 6.711 0 018 4.381c.595.003 1.194.08 1.753.236 1.336-.905 1.923-.717 1.923-.717.382.963.142 1.674.07 1.85.448.49.72 1.114.72 1.877 0 2.686-1.638 3.278-3.197 3.45.251.216.475.643.475 1.296 0 .934-.009 1.688-.009 1.918 0 .187.127.404.482.336A6.996 6.996 0 0015 7.993 6.997 6.997 0 008 1z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
               </a>
-              <a className="">
-                <img src={LinkedinIcon} className="w-9 h-auto" />
+              <a
+                href="https://www.linkedin.com/in/mikael-virtanen-71433b304/"
+                className="text-black hover:text-[#ABB2BF]"
+              >
+                <svg
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="35px"
+                  height="35px"
+                  viewBox="0 0 32 32"
+                  enable-background="new 0 0 32 32"
+                  xml:space="preserve"
+                >
+                  <g>
+                    <path
+                      fill="currentColor"
+                      d="M19.515,11.952c-0.678,0-1.18,0.171-1.573,0.387c-0.063-0.224-0.27-0.388-0.514-0.339h-2.984
+                    c-0.295-0.049-0.534,0.19-0.443,0.5v11c-0.091,0.28,0.148,0.52,0.443,0.5h2.984c0.295,0.02,0.534-0.22,0.534-0.515l-0.001-6.648
+                    c-0.001-0.003-0.012-0.321,0.189-0.54c0.161-0.174,0.438-0.263,0.821-0.263c0.638,0,0.922,0.261,1.028,0.845v6.606
+                    C19.894,23.78,20.133,24.02,20.428,24h3.145c0.295,0.02,0.534-0.22,0.428-0.515v-6.828C24.106,13.185,21.633,11.952,19.515,11.952z
+                    M23.038,23h-2.076v-6.121c0-1.181-0.763-1.913-1.99-1.913c-0.694,0-1.234,0.204-1.606,0.606C16.849,16.132,16.889,16.842,17,17v6
+                    h-2.022v-9.98h1.916v0.336c0,0.203,0.115,0.39,0.298,0.479c0.183,0.089,0.4,0.067,0.562-0.056l0.14-0.108
+                    c0.405-0.319,0.824-0.65,1.622-0.65c0.826,0,3.523,0.263,3.523,3.637V23z"
+                    />
+                    <path
+                      fill="currentColor"
+                      d="M11,6.966C9.878,6.966,8.966,7.878,8.966,9S9.878,11.034,11,11.034S13.034,10.122,13.034,9
+                    S12.122,6.966,11,6.966z M11,9.966c-0.532,0-0.966-0.434-0.966-0.966S10.468,8.034,11,8.034S11.966,8.468,11.966,9
+                    S11.532,9.966,11,9.966z"
+                    />
+                    <path
+                      fill="currentColor"
+                      d="M12.428,11.951H9.46c-0.295,0-0.534,0.239-0.46,0.549v11c-0.074,0.28,0.165,0.52,0.46,0.5h2.968
+                      c0.295,0.02,0.534-0.22,0.534-0.515v-11C12.962,12.19,12.723,11.951,12.428,11.951z M12,23H9.994v-9.98H12V23z"
+                    />
+                    <path
+                      fill="currentColor"
+                      d="M16-0.034C7.158-0.034-0.034,7.158-0.034,16S7.158,32.034,16,32.034S32.034,24.842,32.034,16
+                    S24.842-0.034,16-0.034z M16,30.966C7.748,30.966,1.034,24.252,1.034,16S7.748,1.034,16,1.034S30.966,7.748,30.966,16
+                    S24.252,30.966,16,30.966z"
+                    />
+                  </g>
+                </svg>
               </a>
             </div>
           </div>
@@ -170,6 +301,17 @@ const HomePage = () => {
           Design inspired by Elias. Contact: elias@elias.me
         </footer>
       </section>
+
+      <div className="absolute top-[50%] left-0 h-36 w-28 border border-[#ABB2BF] border-l-0 transition-all duration-500 ease-in-out"></div>
+
+      <ScrollElement
+        homeRef={homeRef}
+        projectRef={projectRef}
+        skillsRef={skillsRef}
+        aboutMeRef={aboutMeRef}
+        contactsRef={contactsRef}
+        scrollContainerRef={scrollRef}
+      />
     </div>
   );
 };
