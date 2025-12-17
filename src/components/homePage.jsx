@@ -3,7 +3,41 @@ import Projects from './projectCards';
 import Skills from './skills';
 import ScrollElement from './scrollEvent.jsx';
 
+import toast from 'react-hot-toast';
+
 const HomePage = () => {
+  const notify = () => {
+    const id = toast(
+      (t) => (
+        <div className="relative bg-[#424955] text-white p-4 rounded-lg w-80">
+          <button
+            onClick={() => toast.dismiss(id)}
+            className="absolute top-2 right-2 text-white font-bold hover:text-gray-300"
+          >
+            ✕
+          </button>
+          <span className="block text-center">
+            "View all" is work in progress. 🛠️ <br />
+            <br />
+            <a
+              href="https://github.com/Misukist"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline text-[#9178DD]"
+            >
+              Check my projects on GitHub
+            </a>
+          </span>
+        </div>
+      ),
+      {
+        duration: 3000,
+        style: { background: 'transparent', boxShadow: 'none' }, // ← tässä poistat valkoisen wrapperin
+        position: 'top-center',
+      }
+    );
+  };
+
   const homeRef = useRef(null);
   const projectRef = useRef(null);
   const aboutMeRef = useRef(null);
@@ -123,7 +157,10 @@ const HomePage = () => {
             </h1>
             <hr className=" w-200 border-t border-[#9178DD]"></hr>
           </div>
-          <a className="text-white hover:underline flex gap-3 items-center">
+          <button
+            onClick={notify}
+            className="text-white hover:underline flex gap-3 items-center"
+          >
             View all{' '}
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -139,7 +176,7 @@ const HomePage = () => {
                 d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
               />
             </svg>
-          </a>
+          </button>
         </div>
         <Projects></Projects>
       </section>
