@@ -132,7 +132,7 @@ const Projects = () => {
         </div>
       </div>
 
-      <div className="lg:w-120 md:w-120 sm:w-90 w-80 pt-12 mx-2">
+      <div className="lg:w-120 md:w-120 sm:w-90 w-80 pt-12 pb-20 lg:pb-0 md:pb-0 sm:pb-15 mx-2">
         <div className="aspect-video overflow-hidden border border-[#ABB2BF]">
           <a href="https://github.com/Misukist/WeatherApp">
             <img
