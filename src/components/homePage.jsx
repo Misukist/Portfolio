@@ -8,7 +8,7 @@ import toast from 'react-hot-toast';
 const HomePage = () => {
   const notify = () => {
     const id = toast(
-      (t) => (
+      () => (
         <div className="relative bg-[#424955] text-white p-4 rounded-lg w-80">
           <button
             onClick={() => toast.dismiss(id)}
@@ -17,7 +17,7 @@ const HomePage = () => {
             ✕
           </button>
           <span className="block text-center">
-            "View all" is work in progress. 🛠️ <br />
+            {`"View all" is work in progress.`} 🛠️ <br />
             <br />
             <a
               href="https://github.com/Misukist"
@@ -48,22 +48,22 @@ const HomePage = () => {
   return (
     <div
       ref={scrollRef}
-      className="bg-[#282C33] pt-35 px-72 relative snap-y overflow-y-scroll h-screen snap-mandatory scroll-smooth overflow-hidden"
+      className="bg-[#282C33] px-4 lg:pt-35 lg:px-72 sm:px-10 md:px-10 relative snap-y overflow-y-scroll h-screen snap-mandatory scroll-smooth overflow-hidden"
     >
       <section
         id="home"
         ref={homeRef}
-        className=" pt-50 pb-60 flex flex-row items-center gap-16 md:justify-between lg:justify-center snap-start "
+        className=" pt-50 pb-60 sm:px-4 flex flex-row items-center gap-16 md:justify-between lg:justify-center snap-start lg:max-w-screen mx-auto "
       >
-        <div className="text-4xl gap-3 p-14 font-semibold  flex flex-col">
-          <h1 className="text-white">Hello, I'm Mikael a</h1>
+        <div className="lg:text-4xl md:text-xl sm:text-lg gap-3 lg:p-14 md:p-7 sm:p-5 font-semibold  flex flex-col ">
+          <h1 className="text-white">{`Hello, I'm Mikael a`}</h1>
           <h1 className="text-[#9178DD]">Full Stack Developer</h1>
-          <p className="text-[#ABB2BF] text-xl pt-9 font-normal">
+          <p className="text-[#ABB2BF] lg:text-xl md:text-lg sm:text-sm pt-9 font-normal">
             I help founders turn ideas into seamless <br /> digital experiences
           </p>
           <div className="flex gap-3 pt-7 items-center">
             <a href="mailto:misukisti@gmail.com">
-              <button className="text-xl font-light text-white border-2 py-2 px-4 border-[#9178DD]  justify-center hover:bg-[#9178DD]">
+              <button className="lg:text-xl md:text-lg sm:text-sm font-light text-white border-2 py-2 px-4 border-[#9178DD]  justify-center hover:bg-[#9178DD]">
                 Contact me!!
               </button>
             </a>
@@ -80,9 +80,9 @@ const HomePage = () => {
               >
                 <path
                   fill="currentColor"
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M8 1C4.133 1 1 4.13 1 7.993c0 3.09 2.006 5.71 4.787 6.635.35.064.478-.152.478-.337 0-.166-.006-.606-.01-1.19-1.947.423-2.357-.937-2.357-.937-.319-.808-.778-1.023-.778-1.023-.635-.434.048-.425.048-.425.703.05 1.073.72 1.073.72.624 1.07 1.638.76 2.037.582.063-.452.244-.76.444-.935-1.554-.176-3.188-.776-3.188-3.456 0-.763.273-1.388.72-1.876-.072-.177-.312-.888.07-1.85 0 0 .586-.189 1.924.716A6.711 6.711 0 018 4.381c.595.003 1.194.08 1.753.236 1.336-.905 1.923-.717 1.923-.717.382.963.142 1.674.07 1.85.448.49.72 1.114.72 1.877 0 2.686-1.638 3.278-3.197 3.45.251.216.475.643.475 1.296 0 .934-.009 1.688-.009 1.918 0 .187.127.404.482.336A6.996 6.996 0 0015 7.993 6.997 6.997 0 008 1z"
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                 />
               </svg>
             </a>
@@ -94,12 +94,11 @@ const HomePage = () => {
                 version="1.1"
                 id="Layer_1"
                 xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
                 width="40px"
                 height="40px"
                 viewBox="0 0 32 32"
-                enable-background="new 0 0 32 32"
-                xml:space="preserve"
+                enableBackground="new 0 0 32 32"
+                xmlSpace="preserve"
               >
                 <g>
                   <path
@@ -134,16 +133,17 @@ const HomePage = () => {
             </a>
           </div>
         </div>
-        <div className="flex flex-col gap-7">
+        <div className="flex flex-col gap-7 items-center">
           <img
+            alt="profiilikuva"
             src="../src/assets/images/Profile.jpg"
-            className="w-100 h-100 rounded-full object-cover  "
+            className="lg:w-100 md:w-60 sm:w-40 w-40 h-auto rounded-full object-cover  "
           />
           <div className="border-2 py-2 px-4 border-[#ABB2BF] justify-center  items-center flex gap-3">
             <div className="w-4 h-4 bg-[#9178DD]"></div>
-            <p className="text-xl font-light text-[#ABB2BF] ">
+            <p className="lg:text-xl md:text-lg sm:text-sm font-light text-[#ABB2BF] ">
               Currently working on:
-              <span className="font-semibold text-white"> Portfolio </span>
+              <span className="font-semibold text-white"> ChatBot </span>
             </p>
           </div>
         </div>
@@ -152,10 +152,10 @@ const HomePage = () => {
       <section id="projects" ref={projectRef} className="pt-30 snap-start">
         <div className=" flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <h1 className="text-3xl font-medium text-[#9178DD]">
+            <h1 className="lg:text-3xl md:text-2xl sm:text-xl text-lg font-medium text-[#9178DD]">
               #<span className="text-white">projects</span>
             </h1>
-            <hr className=" w-200 border-t border-[#9178DD]"></hr>
+            <hr className=" lg:w-200 md:w-150 sm:w-100 w-50 border-t border-[#9178DD]"></hr>
           </div>
           <button
             onClick={notify}
@@ -166,13 +166,13 @@ const HomePage = () => {
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              stroke-width="1.5"
+              strokeWidth="1.5"
               stroke="currentColor"
-              class="size-6"
+              className="size-6"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
               />
             </svg>
@@ -183,7 +183,7 @@ const HomePage = () => {
       <section id="skills" className="pt-30 snap-start">
         <div className=" flex items-center justify-between">
           <div className="flex items-center gap-2 flex-1">
-            <h1 className="text-3xl font-medium text-[#9178DD]">
+            <h1 className="lg:text-3xl md:text-2xl sm:text-xl text-lg font-medium text-[#9178DD]">
               #<span className="text-white">skills</span>
             </h1>
             <hr className=" grow border-t border-[#9178DD]"></hr>
@@ -195,7 +195,7 @@ const HomePage = () => {
       <section id="about-me" ref={aboutMeRef} className="pt-30  snap-start ">
         <div className=" flex items-center justify-between">
           <div className="flex items-center gap-2 flex-1">
-            <h1 className="text-3xl font-medium text-[#9178DD]">
+            <h1 className="lg:text-3xl md:text-2xl sm:text-xl text-lg font-medium text-[#9178DD]">
               #<span className="text-white">about-me</span>
             </h1>
             <hr className=" grow border-t border-[#9178DD]"></hr>
@@ -219,31 +219,31 @@ const HomePage = () => {
       <section id="contacts" ref={contactsRef} className="pt-30 snap-start ">
         <div className=" flex items-center justify-between">
           <div className="flex items-center gap-2 flex-1">
-            <h1 className="text-3xl font-medium text-[#9178DD]">
+            <h1 className="lg:text-3xl md:text-2xl sm:text-xl text-lg font-medium text-[#9178DD]">
               #<span className="text-white">contact</span>
             </h1>
             <hr className=" grow border-t border-[#9178DD]"></hr>
           </div>
         </div>
-        <div className="flex pt-13 gap-100 justify-between">
+        <div className="flex pt-13 lg:gap-100 md:gap-50 sm:gap-30 gap-5 justify-between">
           <p className=" px-13 text-[#ABB2BF]">
             I’m always interested in new and exciting projects. If you have any
             questions or ideas, don’t hesitate to get in touch!
           </p>
-          <div className="mr-7 py-2 px-5 border border-[#ABB2BF]">
+          <div className="lg:mr-7 lg:px-5 mr-1 py-2 px-2 border h-25 border-[#ABB2BF]">
             <h2 className="text-white font-medium pt-2">Message me here</h2>
             <p className=" flex gap-2 py-2 text-[#ABB2BF]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
+                strokeWidth="1.5"
                 stroke="currentColor"
-                class="size-6"
+                className="size-6"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
                 />
               </svg>
@@ -254,7 +254,7 @@ const HomePage = () => {
       </section>
       <section className="snap-start">
         <div className="-mx-72">
-          <hr className="w-screen mt-14 border-t border-white" />
+          <hr className="w-full mt-14 border-t border-white" />
         </div>
         <div className="flex justify-between">
           <div>
@@ -268,7 +268,7 @@ const HomePage = () => {
             <div className="flex justify-center gap-2 pt-2">
               <a
                 href="https://github.com/Misukist"
-                className="text-black hover:text-[#ABB2BF]"
+                className="text-black hover:text-[#ABB2BF] pb-4"
               >
                 <svg
                   width="35px"
@@ -279,9 +279,9 @@ const HomePage = () => {
                 >
                   <path
                     fill="currentColor"
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M8 1C4.133 1 1 4.13 1 7.993c0 3.09 2.006 5.71 4.787 6.635.35.064.478-.152.478-.337 0-.166-.006-.606-.01-1.19-1.947.423-2.357-.937-2.357-.937-.319-.808-.778-1.023-.778-1.023-.635-.434.048-.425.048-.425.703.05 1.073.72 1.073.72.624 1.07 1.638.76 2.037.582.063-.452.244-.76.444-.935-1.554-.176-3.188-.776-3.188-3.456 0-.763.273-1.388.72-1.876-.072-.177-.312-.888.07-1.85 0 0 .586-.189 1.924.716A6.711 6.711 0 018 4.381c.595.003 1.194.08 1.753.236 1.336-.905 1.923-.717 1.923-.717.382.963.142 1.674.07 1.85.448.49.72 1.114.72 1.877 0 2.686-1.638 3.278-3.197 3.45.251.216.475.643.475 1.296 0 .934-.009 1.688-.009 1.918 0 .187.127.404.482.336A6.996 6.996 0 0015 7.993 6.997 6.997 0 008 1z"
-                    clip-rule="evenodd"
+                    clipRule="evenodd"
                   />
                 </svg>
               </a>
@@ -293,12 +293,11 @@ const HomePage = () => {
                   version="1.1"
                   id="Layer_1"
                   xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
                   width="35px"
                   height="35px"
                   viewBox="0 0 32 32"
-                  enable-background="new 0 0 32 32"
-                  xml:space="preserve"
+                  enableBackground="new 0 0 32 32"
+                  xmlSpace="preserve"
                 >
                   <g>
                     <path

@@ -1,10 +1,11 @@
 const Projects = () => {
   return (
-    <div className="flex justify-between">
+    <div className="flex flex-col lg:flex-row md:flex-col justify-between items-center">
       <div className="w-120 pt-12 mx-2">
         <div className="aspect-video overflow-hidden border border-[#ABB2BF]">
           <a href="https://github.com/Misukist/X-Clone">
             <img
+              alt="X-clone"
               src="../src/assets/showcase/x-clone1.png"
               className="w-full h-full scale-130 object-cover hover:scale-140 transition-transform duration-300 ease-in-out"
             ></img>
@@ -27,13 +28,13 @@ const Projects = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                   stroke="currentColor"
-                  class="size-5"
+                  className="size-5"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     d="m8.25 4.5 7.5 7.5-7.5 7.5"
                   />
                 </svg>
@@ -46,13 +47,13 @@ const Projects = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                   stroke="currentColor"
-                  class="size-5"
+                  className="size-5"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5"
                   />
                 </svg>
@@ -66,6 +67,7 @@ const Projects = () => {
         <div className="aspect-video overflow-hidden border border-[#ABB2BF]">
           <a href="https://github.com/Misukist/PokemonSovellus">
             <img
+              alt="Pokemon"
               src="../src/assets/showcase/Pokemon.png"
               className="w-full h-full  object-cover hover:scale-110 transition-transform duration-300 ease-in-out "
             ></img>
@@ -91,13 +93,13 @@ const Projects = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                   stroke="currentColor"
-                  class="size-5"
+                  className="size-5"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     d="m8.25 4.5 7.5 7.5-7.5 7.5"
                   />
                 </svg>
@@ -110,13 +112,13 @@ const Projects = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                   stroke="currentColor"
-                  class="size-5"
+                  className="size-5"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5"
                   />
                 </svg>
@@ -130,6 +132,7 @@ const Projects = () => {
         <div className="aspect-video overflow-hidden border border-[#ABB2BF]">
           <a href="https://github.com/Misukist/WeatherApp">
             <img
+              alt="weather app"
               src="../src/assets/showcase/weatherApp.png"
               className="w-full h-full object-cover hover:scale-110 transition-transform duration-300 ease-in-out"
             ></img>
@@ -152,13 +155,13 @@ const Projects = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                   stroke="currentColor"
-                  class="size-5"
+                  className="size-5"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5"
                   />
                 </svg>

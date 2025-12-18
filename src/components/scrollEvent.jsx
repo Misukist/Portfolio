@@ -151,7 +151,7 @@ const ScrollElement = ({
     <>
       {/* REUNANELIÖ */}
       <div
-        className="absolute transition-all duration-500 ease-in-out border border-[#ABB2BF]"
+        className="absolute transition-all duration-500 ease-in-out border border-[#ABB2BF] hidden lg:block md:block"
         style={{
           top: baseTop + current.box.topOffset,
           width: current.box.width,
@@ -165,7 +165,7 @@ const ScrollElement = ({
 
       {/* DOT GRID */}
       <div
-        className="absolute transition-all duration-500 ease-in-out"
+        className="absolute transition-all duration-500 ease-in-out hidden lg:block"
         style={{
           top: baseTop + current.dots.topOffset,
           left: current.dots.left ?? 'auto',
