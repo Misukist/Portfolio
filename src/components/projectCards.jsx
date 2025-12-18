@@ -5,7 +5,7 @@ import weather from '../assets/showcase/weatherApp.png';
 const Projects = () => {
   return (
     <div className="flex flex-col lg:flex-row md:flex-col justify-between items-center">
-      <div className="lg:w-120 md:w-120 sm:w-90 w-90 pt-12 mx-2">
+      <div className="lg:w-120 md:w-120 sm:w-90 w-80 pt-12 mx-2">
         <div className="aspect-video overflow-hidden border border-[#ABB2BF]">
           <a href="https://github.com/Misukist/X-Clone">
             <img
@@ -67,7 +67,7 @@ const Projects = () => {
         </div>
       </div>
 
-      <div className="lg:w-120 md:w-120 sm:w-90 w-90 pt-12 mx-2">
+      <div className="lg:w-120 md:w-120 sm:w-90 w-80 pt-12 mx-2">
         <div className="aspect-video overflow-hidden border border-[#ABB2BF]">
           <a href="https://github.com/Misukist/PokemonSovellus">
             <img
@@ -132,7 +132,7 @@ const Projects = () => {
         </div>
       </div>
 
-      <div className="lg:w-120 md:w-120 sm:w-90 w-90 mx-2">
+      <div className="lg:w-120 md:w-120 sm:w-90 w-80 pt-12 mx-2">
         <div className="aspect-video overflow-hidden border border-[#ABB2BF]">
           <a href="https://github.com/Misukist/WeatherApp">
             <img
