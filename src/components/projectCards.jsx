@@ -1,12 +1,16 @@
+import xclone from '../assets/showcase/x-clone1.png';
+import pokemon from '../assets/showcase/Pokemon.png';
+import weather from '../assets/showcase/weatherApp.png';
+
 const Projects = () => {
   return (
     <div className="flex flex-col lg:flex-row md:flex-col justify-between items-center">
-      <div className="w-120 pt-12 mx-2">
+      <div className="lg:w-120 md:w-120 sm:w-90 w-90 pt-12 mx-2">
         <div className="aspect-video overflow-hidden border border-[#ABB2BF]">
           <a href="https://github.com/Misukist/X-Clone">
             <img
               alt="X-clone"
-              src="../src/assets/showcase/x-clone1.png"
+              src={xclone}
               className="w-full h-full scale-130 object-cover hover:scale-140 transition-transform duration-300 ease-in-out"
             ></img>
           </a>
@@ -63,12 +67,12 @@ const Projects = () => {
         </div>
       </div>
 
-      <div className="w-120 pt-12 mx-2">
+      <div className="lg:w-120 md:w-120 sm:w-90 w-90 pt-12 mx-2">
         <div className="aspect-video overflow-hidden border border-[#ABB2BF]">
           <a href="https://github.com/Misukist/PokemonSovellus">
             <img
               alt="Pokemon"
-              src="../src/assets/showcase/Pokemon.png"
+              src={pokemon}
               className="w-full h-full  object-cover hover:scale-110 transition-transform duration-300 ease-in-out "
             ></img>
           </a>
@@ -128,12 +132,12 @@ const Projects = () => {
         </div>
       </div>
 
-      <div className="w-120 pt-12 mx-2">
+      <div className="lg:w-120 md:w-120 sm:w-90 w-90 mx-2">
         <div className="aspect-video overflow-hidden border border-[#ABB2BF]">
           <a href="https://github.com/Misukist/WeatherApp">
             <img
               alt="weather app"
-              src="../src/assets/showcase/weatherApp.png"
+              src={weather}
               className="w-full h-full object-cover hover:scale-110 transition-transform duration-300 ease-in-out"
             ></img>
           </a>

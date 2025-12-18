@@ -1,29 +1,29 @@
 const Skills = () => {
   const frontendIcons = [
-    { src: '../src/assets/tech/front/react-svgrepo-com.svg', alt: 'React' },
-    { src: '../src/assets/tech/front/vitejs-svgrepo-com.svg', alt: 'Vite' },
-    { src: '../src/assets/tech/front/html-5-svgrepo-com.svg', alt: 'HTML' },
-    { src: '../src/assets/tech/front/css-3-svgrepo-com.svg', alt: 'CSS' },
+    { src: '/react-svgrepo-com.svg', alt: 'React' },
+    { src: '/vitejs-svgrepo-com.svg', alt: 'Vite' },
+    { src: '/html-5-svgrepo-com.svg', alt: 'HTML' },
+    { src: '/css-3-svgrepo-com.svg', alt: 'CSS' },
     {
-      src: '../src/assets/tech/front/tailwind-svgrepo-com.svg',
+      src: '/tailwind-svgrepo-com.svg',
       alt: 'Tailwind',
     },
   ];
   const backendIcons = [
-    { src: '../src/assets/tech/back/node-svgrepo-com.svg', alt: 'node.js' },
+    { src: '/node-svgrepo-com.svg', alt: 'node.js' },
     {
-      src: '../src/assets/tech/back/express-svgrepo-com.svg',
+      src: '/express-svgrepo-com.svg',
       alt: 'express.js',
     },
     {
-      src: '../src/assets/tech/back/javascript-svgrepo-com.svg',
+      src: '/javascript-svgrepo-com.svg',
       alt: 'JS',
     },
-    { src: '../src/assets/tech/back/mongodb-svgrepo-com.svg', alt: 'MongoDB' },
+    { src: '/mongodb-svgrepo-com.svg', alt: 'MongoDB' },
   ];
 
   return (
-    <div className="pt-12 flex gap-60 justify-center">
+    <div className="pt-12 flex lg:gap-60 md:gap-40 sm:gap-20 gap-20 justify-center">
       {/* Frontend */}
       <div className="flex flex-col items-center">
         <h2 className="text-2xl font-semibold text-white mb-6">Frontend</h2>
@@ -31,9 +31,13 @@ const Skills = () => {
           {frontendIcons.map((icon, idx) => (
             <div
               key={idx}
-              className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg shadow-black "
+              className="lg:w-20 md:w-20 sm:w-15 w-15  lg:h-20 md:h-20 sm:h-15 h-15  bg-white rounded-full flex items-center justify-center lg:shadow-lg md:shadow-lg sm:shadow-md shadow-md shadow-black "
             >
-              <img src={icon.src} alt={icon.alt} className="w-12 h-12" />
+              <img
+                src={icon.src}
+                alt={icon.alt}
+                className="lg:w-12 md:w-12 sm:w-10 w-10 lg:h-12 md:h-12 sm:h-10 h-10"
+              />
             </div>
           ))}
         </div>
@@ -46,9 +50,13 @@ const Skills = () => {
           {backendIcons.map((icon, idx) => (
             <div
               key={idx}
-              className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg shadow-black"
+              className="lg:w-20 md:w-20 sm:w-15 w-15  lg:h-20 md:h-20 sm:h-15 h-15 bg-white rounded-full flex items-center justify-center lg:shadow-lg md:shadow-lg sm:shadow-md shadow-md shadow-black"
             >
-              <img src={icon.src} alt={icon.alt} className="w-12 h-12" />
+              <img
+                src={icon.src}
+                alt={icon.alt}
+                className="lg:w-12 md:w-12 sm:w-10 w-10 lg:h-12 md:h-12 sm:h-10 h-10"
+              />
             </div>
           ))}
         </div>
