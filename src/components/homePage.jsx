@@ -202,7 +202,7 @@ const HomePage = () => {
             <hr className=" grow border-t border-[#9178DD]"></hr>
           </div>
         </div>
-        <p className="pt-13 px-13 text-[#ABB2BF]">
+        <p className="pt-13 px-13 lg:pb-0  md:pb-0 sm:pb-10 pb-15 text-[#ABB2BF]">
           Hello, I’m Mikael! <br /> <br /> I’m a Computer Science engineer from
           Tampere, Finland. I initially specialized in graphics, 3D, and UI/UX
           design, but over time I’ve expanded my skills to full-stack
