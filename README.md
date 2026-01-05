@@ -2,7 +2,7 @@
 
 🔗 Live demo: https://portfolio-mikael.onrender.com/
 
-![Portfolio preview](../showcase/Portfolio.png)
+![Portfolio preview](./src/showcase/Portfolio.png)
 
 Tämä projekti on henkilökohtainen portfolio-sivu, jonka tarkoituksena on esitellä osaamistani ja projektejani selkeällä ja visuaalisesti rauhallisella tavalla.
 
