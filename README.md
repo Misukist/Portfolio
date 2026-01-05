@@ -2,7 +2,7 @@
 
 🔗 Live demo: https://portfolio-mikael.onrender.com/
 
-![Portfolio preview](./showcase/Portfolio.png)
+![Portfolio preview](../showcase/Portfolio.png)
 
 Tämä projekti on henkilökohtainen portfolio-sivu, jonka tarkoituksena on esitellä osaamistani ja projektejani selkeällä ja visuaalisesti rauhallisella tavalla.
 
@@ -14,13 +14,15 @@ Portfolio on toteutettu responsiivisena ja se mukautuu sujuvasti eri näyttökok
 
 React
 
-CSS / Styled Components / muu (täydennä tarvittaessa)
+Tailwind CSS
 
 JavaScript
+
+Toast
 
 ## 🚀 Jatkokehitys
 
 - Projektisivun lisääminen projektien kasvaessa
-- responsiivisuuden hienosäätö mobiililaitteille
+- Responsiivisuuden hienosäätö mobiililaitteille
 - Sivun päivittäminen realiajassa
 
